@@ -1,0 +1,65 @@
+/* src/components/Header.css */
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #000000, #121212);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  animation: fadeSlideIn 1.8s ease-in-out;
+}
+
+.hero-text {
+  animation: zoomFadeIn 1.8s ease-in-out;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+/* Soch (special font & color) */
+.hero-title .soch {
+  font-family: "Blacksword", cursive;
+  color: #FFFD77;
+}
+
+/* STUDIO (regular font & color) */
+.hero-title .studio {
+  font-family: "Inter", sans-serif;
+  color: white;
+}
+
+.hero p {
+  font-style: italic;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  color: #ccc;
+}
+
+/* Animations */
+@keyframes zoomFadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
