@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/soch-studio-website/static/css/main.8388a333.css",
-    "main.js": "/soch-studio-website/static/js/main.ceb75cee.js",
+    "main.css": "/soch-studio-website/static/css/main.2e2f3157.css",
+    "main.js": "/soch-studio-website/static/js/main.fe542950.js",
     "static/js/453.2530da00.chunk.js": "/soch-studio-website/static/js/453.2530da00.chunk.js",
     "static/media/Blacksword.otf": "/soch-studio-website/static/media/Blacksword.deaedec736e9442caf72.otf",
     "index.html": "/soch-studio-website/index.html",
-    "main.8388a333.css.map": "/soch-studio-website/static/css/main.8388a333.css.map",
-    "main.ceb75cee.js.map": "/soch-studio-website/static/js/main.ceb75cee.js.map",
+    "main.2e2f3157.css.map": "/soch-studio-website/static/css/main.2e2f3157.css.map",
+    "main.fe542950.js.map": "/soch-studio-website/static/js/main.fe542950.js.map",
     "453.2530da00.chunk.js.map": "/soch-studio-website/static/js/453.2530da00.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8388a333.css",
-    "static/js/main.ceb75cee.js"
+    "static/css/main.2e2f3157.css",
+    "static/js/main.fe542950.js"
   ]
 }
