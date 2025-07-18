@@ -2,13 +2,21 @@
   position: fixed;
   top: 0;
   width: 100%;
-  background: #000;
+  /* Initial semi-transparent background */
+  background: rgba(0, 0, 0, 0.7); /* Starts with 70% opaque black */
   padding: 1rem 2rem;
   z-index: 1000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid rgba(34, 34, 34, 0.7); /* Semi-transparent border */
+  transition: background 0.3s ease-in-out, border-bottom 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Styles for when the navbar is scrolled */
+.navbar.scrolled {
+  background: #000; /* Becomes fully opaque black */
+  border-bottom: 1px solid #333; /* Slightly stronger border */
 }
 
 .logo {

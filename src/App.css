@@ -1,3 +1,5 @@
+/* src/App.css */
+
 @font-face {
   font-family: "Blacksword";
   src: url("./assets/fonts/Blacksword.otf") format("opentype"); /* path relative to App.css */
@@ -37,6 +39,7 @@ section {
   padding: 4rem 2rem;
   max-width: 1100px;
   margin: auto;
+  /* Removed min-height and flex properties added for dot navigation */
 }
 
 /* Portfolio styles */
@@ -45,19 +48,49 @@ section {
   gap: 2rem;
   overflow-x: auto;
   padding-bottom: 1rem;
+  justify-content: center; /* Added for centering in previous step */
+  align-items: flex-start; /* Added for alignment in previous step */
 }
 .portfolio article {
   min-width: 300px;
   background: #1a1a1a;
   border-radius: 10px;
   overflow: hidden;
+  position: relative; /* Added for hover effects */
+  cursor: pointer; /* Added for hover effects */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added for hover effects */
+}
+.portfolio article:hover {
+  transform: translateY(-10px); /* Added for hover effects */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Added for hover effects */
 }
 .portfolio img {
   width: 100%;
   display: block;
+  transition: transform 0.3s ease-in-out; /* Added for hover effects */
+}
+.portfolio article:hover img {
+  transform: scale(1.05); /* Added for hover effects */
+}
+.portfolio article::before { /* Added for hover effects */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+}
+.portfolio article:hover::before { /* Added for hover effects */
+    opacity: 1;
 }
 .portfolio .content {
   padding: 1rem;
+  position: relative; /* Added for hover effects */
+  z-index: 2; /* Added for hover effects */
 }
 
 /* Services grid */
@@ -105,10 +138,11 @@ section {
   border-radius: 50px;
   font-weight: 600;
   text-decoration: none;
-  transition: background 0.3s;
+  transition: background 0.3s, box-shadow 0.3s; /* Added box-shadow to transition */
 }
 .cta a:hover {
   background: #4aa7e0;
+  box-shadow: 0 0 20px rgba(111, 193, 255, 0.7); /* Adds a subtle glow on hover */
 }
 
 /* Footer */

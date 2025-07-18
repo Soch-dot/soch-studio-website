@@ -1,18 +1,26 @@
 /* src/components/Header.css */
 
 .hero {
-  min-height: 100vh;
-  background: linear-gradient(to bottom, #000000, #121212);
+  min-height: 100vh; /* Ensures the hero section takes full viewport height */
+  
+  /* IMPORTANT: Ensure NO background-image, background-size, background-position, background-repeat properties here */
+  /* IMPORTANT: Ensure NO ::before pseudo-element for overlay here */
+  
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 1rem;
-  animation: fadeSlideIn 1.8s ease-in-out;
+  animation: fadeSlideIn 1.8s ease-in-out; /* Existing animation */
+  position: relative; /* Keep this for z-index layering of child elements */
 }
 
 .hero-text {
-  animation: zoomFadeIn 1.8s ease-in-out;
+  position: relative; /* Ensures the text is positioned above any inline image/overlay */
+  z-index: 2; /* Puts the text above any inline image/overlay */
+  animation: zoomFadeIn 1.8s ease-in-out; /* Existing animation */
+  
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Subtle text shadow for readability */
 }
 
 .hero-title {
@@ -25,12 +33,12 @@
 /* Soch (special font & color) */
 .hero-title .soch {
   font-family: "Blacksword", cursive;
-  color: #FFFD77;
+  color: #FFFD77; /* Keep the existing accent color */
 }
 
 /* STUDIO (regular font & color) */
 .hero-title .studio {
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif; /* Ensure 'Inter' is available or replace with a generic sans-serif */
   color: white;
 }
 
@@ -41,7 +49,7 @@
   color: #ccc;
 }
 
-/* Animations */
+/* Animations (existing) */
 @keyframes zoomFadeIn {
   0% {
     opacity: 0;
